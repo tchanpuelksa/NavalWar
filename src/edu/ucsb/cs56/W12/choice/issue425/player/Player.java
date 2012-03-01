@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.W12.andrewlo.issue425.player;
+package edu.ucsb.cs56.W12.choice.issue425.player;
 
 /**
  * Class called Player which will make the player object
@@ -10,7 +10,8 @@ package edu.ucsb.cs56.W12.andrewlo.issue425.player;
 public class Player{
 
     String name = "";
-    int health = 5;
+    int maxHealth = 5;
+    int currentHealth = 5;
 
     /**
      * Simple constructor that set the name to the name that the user input
@@ -19,7 +20,7 @@ public class Player{
 
     public Player(String inputName){
 
-	name = inPutName;
+	name = inputName;
 
     }
 
@@ -28,8 +29,16 @@ public class Player{
      * @return health current health point of the player
      */
 
-    public int getHealth(){
+    public int getCurrentHealth(){
 
-	return health;
+	return currentHealth;
     }
+
+    public void setMaxHealth(int inputHealth){
+
+	maxHealth = inputHealth;
+
+    }
+
+	
 }

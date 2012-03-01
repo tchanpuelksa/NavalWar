@@ -8,8 +8,6 @@ package edu.ucsb.cs56.W12.choice.issue425.main;
 public class NavalWar{
 
     public static void main(String[] args){
-
-	Player player1 = new Player(inputName);
 	
     }
 
