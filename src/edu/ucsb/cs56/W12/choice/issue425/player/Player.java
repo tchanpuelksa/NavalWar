@@ -9,9 +9,10 @@ package edu.ucsb.cs56.W12.choice.issue425.player;
 
 public class Player{
 
-    String name = "";
-    int maxHealth = 5;
-    int currentHealth = 5;
+    private String name = "";
+    private int maxHealth = 5;
+    private int currentHealth = 5;
+    private int score = 0;
 
     /**
      * Simple constructor that set the name to the name that the user input
@@ -20,7 +21,18 @@ public class Player{
 
     public Player(String inputName){
 
-	name = inputName;
+    	this.name = inputName;
+
+    }
+
+    /**
+     * Simple get method that returns the name of the player
+     * @return name
+     */
+
+    public String getName(){
+	
+    	return this.name;
 
     }
 
@@ -31,14 +43,52 @@ public class Player{
 
     public int getCurrentHealth(){
 
-	return currentHealth;
+    	return this.currentHealth;
+    }
+    
+    public int getMaxHealth(){
+    	
+    	return this.maxHealth;
     }
 
-    public void setMaxHealth(int inputHealth){
+    /**
+     * A method which set the max health of the player 
+     * @param inputMaxHealth the max health of the player
+     */
 
-	maxHealth = inputHealth;
+    public void setMaxHealth(int inputMaxHealth){
+
+    	this.maxHealth = inputMaxHealth;
 
     }
-
+    
+    /**
+     * A method used to add to or subtract current health
+     * @param healthGained
+     */
+    
+    public void addToHealth(int healthGained){
+    	
+    	this.currentHealth += healthGained;
+    }
+    
+    /**
+     * A simple get method which returns player's score
+     * @return score
+     */
+    
+    public int getScore(){
+    	
+    	return this.score;
+    }
+    
+    /**
+     * A method used to add scores to the player score count
+     * @param scoreAwarded
+     */
+    public void addToScore(int scoreAwarded){
+    	
+    	this.score += scoreAwarded;
+    }
 	
 }
