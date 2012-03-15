@@ -11,6 +11,7 @@ import edu.ucsb.cs56.W12.choice.issue425.player.Player;
  * Run the game
  * @author Thiti Chanpuelksa
  * @version cs56,W12,3/2/2012
+ * test
  */
 
 public class Main{
@@ -21,6 +22,7 @@ public class Main{
 	
     	// Prompt the user to enter the username
     	System.out.print("Please Enter Your Name: ");
+    	System.out.print("Test");
 	
     	//get the user input
     	Scanner scanner = new Scanner(System.in);
