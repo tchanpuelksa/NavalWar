@@ -15,14 +15,13 @@ import edu.ucsb.cs56.W12.choice.issue425.player.Player;
  */
 
 public class Main{
-
+/*
     public static void main(String[] args){
     	
     	NavalWar game = new NavalWar();
 	
     	// Prompt the user to enter the username
     	System.out.print("Please Enter Your Name: ");
-    	System.out.print("Test");
 	
     	//get the user input
     	Scanner scanner = new Scanner(System.in);
@@ -51,5 +50,6 @@ public class Main{
     	//start!
     	game.startPlaying(player1, gameGrid);
     }
+*/
 
 }

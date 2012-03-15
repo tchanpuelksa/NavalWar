@@ -25,7 +25,7 @@ public class NavalWar{
 	 */
 	public void setUpGame(){
 		//Make some battleships and set them up
-		//Entity("nameOfShip",points,isAMedicShip)
+		//Entity("nameOfShip",points,isAMedicShip, size)
 		Entity battlecruiser = new Entity("Battlecruiser",300 ,false, 3);
 		Entity cruiser       = new Entity("Cruiser"      ,200 ,false, 2);
 	    Entity destroyer     = new Entity("Destroyer"    ,250 ,false, 3);
@@ -98,6 +98,16 @@ public class NavalWar{
 		
 		finishGame();
 	}
+	
+	/**
+	 * the start playing method for gui
+	 * @param player the player profile, contains points, health, etc.
+	 */
+	public void startPlayingGUI(Player player1){
+		
+	}
+	
+	
 	/**
 	 * A method used to check the user's guess to see if it hit, and what entity was hit and respond accordingly
 	 * @param userGuess
