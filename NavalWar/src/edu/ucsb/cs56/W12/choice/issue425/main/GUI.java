@@ -16,9 +16,15 @@ import java.awt.event.MouseEvent;
 import java.awt.Color;
 import javax.swing.border.BevelBorder;
 
-import edu.ucsb.cs56.W12.choice.issue425.game.NavalWar;
+import edu.ucsb.cs56.W12.choice.issue425.game.NavalWarGUI;
 import edu.ucsb.cs56.W12.choice.issue425.player.Player;
 import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.GridBagLayout;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.RowSpec;
+import net.miginfocom.swing.MigLayout;
 
 public class GUI extends JFrame {
 	private JPanel cardStack;
@@ -41,8 +47,17 @@ public class GUI extends JFrame {
 	private JLabel lblScore;
 	private JLabel usrScore;
 	private JPanel panelGrid;
-	private JPanel panel_2;
+	private JPanel panelSide;
 	private JTextPane sideText;
+	private NavalWarGUI game1;
+	private Box verticalBox;
+	private JPanel rowA;
+	private JPanel rowB;
+	private JPanel rowC;
+	private JPanel rowD;
+	private JPanel rowE;
+	private JPanel rowF;
+	private JPanel rowG;
 
 	public GUI() {
 		setResizable(false);
@@ -64,7 +79,8 @@ public class GUI extends JFrame {
 		JMenuItem mntmExit = new JMenuItem("Exit");
 		mntmExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
+				game1.finishGame();
+				//System.exit(0);
 			}
 		});
 		mnFile.add(mntmExit);
@@ -224,9 +240,10 @@ public class GUI extends JFrame {
 		//Action listener with this button which will create the game
 		btnToMainPage = new JButton("Lets Play !!");
 		btnToMainPage.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
 				
-				NavalWar game1 = new NavalWar();
+				game1 = new NavalWarGUI();
 				Player player1 = new Player(userName);
 				game1.setUpGame();
 				
@@ -236,7 +253,7 @@ public class GUI extends JFrame {
 				usrHealth.setText(Integer.toString(player1.getCurrentHealth()));
 				usrScore.setText(Integer.toString(player1.getScore()));
 				
-				game1.startPlayingGUI(player1);
+				game1.startPlaying(player1, sideText);
 			}
 		});
 		btnToMainPage.setFont(new Font("Comic Sans MS", Font.BOLD, 15));
@@ -285,21 +302,49 @@ public class GUI extends JFrame {
 		usrScore.setBounds(612, 77, 102, 24);
 		panelProfile.add(usrScore);
 		
+		//the game grid, creating each component.
 		panelGrid = new JPanel();
+		panelGrid.setBackground(new Color(30, 144, 255));
+		panelGrid.setBorder(new BevelBorder(BevelBorder.RAISED, new Color(30, 144, 255), null, null, null));
 		panelGrid.setBounds(10, 149, 541, 541);
 		mainPage.add(panelGrid);
-		panelGrid.setLayout(new BorderLayout(0, 0));
+		panelGrid.setLayout(new GridLayout(1, 0, 0, 0));
 		
-		panel_2 = new JPanel();
-		panel_2.setBounds(561, 149, 173, 541);
-		mainPage.add(panel_2);
-		panel_2.setLayout(null);
+		verticalBox = Box.createVerticalBox();
+		panelGrid.add(verticalBox);
 		
+		rowA = new JPanel();
+		verticalBox.add(rowA);
+		
+		rowB = new JPanel();
+		verticalBox.add(rowB);
+		
+		rowC = new JPanel();
+		verticalBox.add(rowC);
+		
+		rowD = new JPanel();
+		verticalBox.add(rowD);
+		
+		rowE = new JPanel();
+		verticalBox.add(rowE);
+		
+		rowF = new JPanel();
+		verticalBox.add(rowF);
+		
+		rowG = new JPanel();
+		verticalBox.add(rowG);
+		
+		//the side panel for displaying the text to user as the game goes.
+		panelSide = new JPanel();
+		panelSide.setBounds(561, 149, 173, 541);
+		mainPage.add(panelSide);
+		panelSide.setLayout(null);
+		//actual text pane that goes inside panelSide
 		sideText = new JTextPane();
 		sideText.setEditable(false);
 		sideText.setFont(new Font("Comic Sans MS", Font.PLAIN, 12));
 		sideText.setBounds(0, 0, 173, 541);
-		panel_2.add(sideText);
+		panelSide.add(sideText);
 		
 		
 	}

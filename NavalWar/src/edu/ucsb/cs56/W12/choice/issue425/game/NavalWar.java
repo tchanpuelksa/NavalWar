@@ -100,15 +100,6 @@ public class NavalWar{
 	}
 	
 	/**
-	 * the start playing method for gui
-	 * @param player the player profile, contains points, health, etc.
-	 */
-	public void startPlayingGUI(Player player1){
-		
-	}
-	
-	
-	/**
 	 * A method used to check the user's guess to see if it hit, and what entity was hit and respond accordingly
 	 * @param userGuess
 	 * @param player
@@ -186,7 +177,7 @@ public class NavalWar{
 	 * A method that display a little congratulation note if the player wins.
 	 */
 	private void finishGame(){
-		if(winner == true){
+		if(winner == false){
 			System.out.println("");
 			System.out.println("Congratulation, You've Won!");
 			System.out.println("It took you "+numOfGuesses+ " guesses.");
