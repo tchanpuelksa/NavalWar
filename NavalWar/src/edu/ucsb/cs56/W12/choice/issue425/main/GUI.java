@@ -21,6 +21,8 @@ import edu.ucsb.cs56.W12.choice.issue425.player.Player;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.GridBagLayout;
+import java.util.ArrayList;
+
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.RowSpec;
@@ -50,6 +52,7 @@ public class GUI extends JFrame {
 	private JPanel panelSide;
 	private JTextPane sideText;
 	private NavalWarGUI game1;
+	private Player player1;
 	private Box verticalBox;
 	private JPanel rowA;
 	private JPanel rowB;
@@ -58,6 +61,118 @@ public class GUI extends JFrame {
 	private JPanel rowE;
 	private JPanel rowF;
 	private JPanel rowG;
+	private ArrayList<JButton> btnRowA = new ArrayList<JButton>();
+	private ArrayList<JButton> btnRowB = new ArrayList<JButton>();
+	private ArrayList<JButton> btnRowC = new ArrayList<JButton>();
+	private ArrayList<JButton> btnRowD = new ArrayList<JButton>();
+	private ArrayList<JButton> btnRowE = new ArrayList<JButton>();
+	private ArrayList<JButton> btnRowF = new ArrayList<JButton>();
+	private ArrayList<JButton> btnRowG = new ArrayList<JButton>();
+	private JPanel cellA0;
+	private JPanel cellA1;
+	private JPanel cellA2;
+	private JPanel cellA3;
+	private JPanel cellA4;
+	private JPanel cellA5;
+	private JPanel cellA6;
+	private JPanel cellB0;
+	private JPanel cellB1;
+	private JPanel cellB2;
+	private JPanel cellB3;
+	private JPanel cellB4;
+	private JPanel cellB5;
+	private JPanel cellB6;
+	private JPanel cellC0;
+	private JPanel cellC1;
+	private JPanel cellC2;
+	private JPanel cellC3;
+	private JPanel cellC4;
+	private JPanel cellC5;
+	private JPanel cellC6;
+	private JPanel cellD0;
+	private JPanel cellD1;
+	private JPanel cellD2;
+	private JPanel cellD3;
+	private JPanel cellD4;
+	private JPanel cellD5;
+	private JPanel cellD6;
+	private JPanel cellE0;
+	private JPanel cellE1;
+	private JPanel cellE2;
+	private JPanel cellE3;
+	private JPanel cellE4;
+	private JPanel cellE5;
+	private JPanel cellE6;
+	private JPanel cellF0;
+	private JPanel cellF1;
+	private JPanel cellF2;
+	private JPanel cellF3;
+	private JPanel cellF4;
+	private JPanel cellF5;
+	private JPanel cellF6;
+	private JPanel cellG0;
+	private JPanel cellG1;
+	private JPanel cellG2;
+	private JPanel cellG3;
+	private JPanel cellG4;
+	private JPanel cellG5;
+	private JPanel cellG6;
+	private JButton a0;
+	private JButton a1;
+	private JButton a2;
+	private JButton a3;
+	private JButton a4;
+	private JButton a5;
+	private JButton a6;
+	private JPanel a0_panel;
+	private JPanel a1_panel;
+	private JPanel a2_panel;
+	private JPanel a3_panel;
+	private JPanel a4_panel;
+	private JPanel a5_panel;
+	private JPanel a6_panel;
+	private JButton b0;
+	private JButton b1;
+	private JButton b2;
+	private JButton b3;
+	private JButton b4;
+	private JButton b5;
+	private JButton b6;
+	private JPanel b0_panel;
+	private JPanel b1_panel;
+	private JPanel b2_panel;
+	private JPanel b3_panel;
+	private JPanel b4_panel;
+	private JPanel b5_panel;
+	private JPanel b6_panel;
+	private JButton c0;
+	private JButton c1;
+	private JButton c2;
+	private JButton c3;
+	private JButton c4;
+	private JButton c5;
+	private JButton c6;
+	private JPanel c0_panel;
+	private JPanel c1_panel;
+	private JPanel c2_panel;
+	private JPanel c3_panel;
+	private JPanel c4_panel;
+	private JPanel c5_panel;
+	private JPanel c6_panel;
+	private JButton d0;
+	private JButton d1;
+	private JButton d2;
+	private JButton d3;
+	private JButton d4;
+	private JButton d5;
+	private JButton d6;
+	private JPanel d0_panel;
+	private JPanel d1_panel;
+	private JPanel d2_panel;
+	private JPanel d3_panel;
+	private JPanel d4_panel;
+	private JPanel d5_panel;
+	private JPanel d6_panel;
 
 	public GUI() {
 		setResizable(false);
@@ -244,7 +359,7 @@ public class GUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				game1 = new NavalWarGUI();
-				Player player1 = new Player(userName);
+				player1 = new Player(userName);
 				game1.setUpGame();
 				
 				CardLayout c3 = (CardLayout)(cardStack.getLayout());
@@ -313,26 +428,743 @@ public class GUI extends JFrame {
 		verticalBox = Box.createVerticalBox();
 		panelGrid.add(verticalBox);
 		
+		//the A row
 		rowA = new JPanel();
 		verticalBox.add(rowA);
+		rowA.setLayout(null);
+		
+		cellA0 = new JPanel();
+		cellA0.setBounds(0, 0, 76, 76);
+		rowA.add(cellA0);
+		cellA0.setLayout(new CardLayout(0, 0));
+		
+		//each button for each cell
+		a0 = new JButton("a0");
+		a0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("a0",player1,a0_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellA0.getLayout());
+				c.show(cellA0, "a0_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellA0.add(a0, "a0_btn");
+		
+		//panel that goes behind the cell
+		a0_panel = new JPanel();
+		cellA0.add(a0_panel, "a0_panel");
+		
+		cellA1 = new JPanel();
+		cellA1.setBounds(76, 0, 76, 76);
+		rowA.add(cellA1);
+		cellA1.setLayout(new CardLayout(0, 0));
+		
+		a1 = new JButton("a1");
+		a1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("a1",player1,a1_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellA1.getLayout());
+				c.show(cellA1, "a1_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellA1.add(a1, "a1_btn");
+		
+		a1_panel = new JPanel();
+		cellA1.add(a1_panel, "a1_panel");
+		
+		cellA2 = new JPanel();
+		cellA2.setBounds(152, 0, 76, 76);
+		rowA.add(cellA2);
+		cellA2.setLayout(new CardLayout(0, 0));
+		
+		a2 = new JButton("a2");
+		a2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("a2",player1,a2_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellA2.getLayout());
+				c.show(cellA2, "a2_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellA2.add(a2, "a2_btn");
+		
+		a2_panel = new JPanel();
+		cellA2.add(a2_panel, "a2_panel");
+		
+		cellA3 = new JPanel();
+		cellA3.setBounds(228, 0, 76, 76);
+		rowA.add(cellA3);
+		cellA3.setLayout(new CardLayout(0, 0));
+		
+		a3 = new JButton("a3");
+		a3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("a3",player1,a3_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellA3.getLayout());
+				c.show(cellA3, "a3_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellA3.add(a3, "a3_btn");
+		
+		a3_panel = new JPanel();
+		cellA3.add(a3_panel, "a3_panel");
+		
+		cellA4 = new JPanel();
+		cellA4.setBounds(304, 0, 76, 76);
+		rowA.add(cellA4);
+		cellA4.setLayout(new CardLayout(0, 0));
+		
+		a4 = new JButton("a4");
+		a4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("a4",player1,a4_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellA4.getLayout());
+				c.show(cellA4, "a4_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellA4.add(a4, "a4_btn");
+		
+		a4_panel = new JPanel();
+		cellA4.add(a4_panel, "a4_panel");
+		
+		cellA5 = new JPanel();
+		cellA5.setBounds(380, 0, 76, 76);
+		rowA.add(cellA5);
+		cellA5.setLayout(new CardLayout(0, 0));
+		
+		a5 = new JButton("a5");
+		a5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("a5",player1,a5_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellA5.getLayout());
+				c.show(cellA5, "a5_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellA5.add(a5, "a5_btn");
+		
+		a5_panel = new JPanel();
+		cellA5.add(a5_panel, "a5_panel");
+		
+		cellA6 = new JPanel();
+		cellA6.setBounds(456, 0, 76, 76);
+		rowA.add(cellA6);
+		cellA6.setLayout(new CardLayout(0, 0));
+		
+		a6 = new JButton("a6");
+		a6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("a6",player1,a6_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellA6.getLayout());
+				c.show(cellA6, "a6_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellA6.add(a6, "a6_btn");
+		
+		a6_panel = new JPanel();
+		cellA6.add(a6_panel, "a6_panel");
 		
 		rowB = new JPanel();
 		verticalBox.add(rowB);
+		rowB.setLayout(null);
+		
+		cellB0 = new JPanel();
+		cellB0.setBounds(0, 0, 76, 77);
+		rowB.add(cellB0);
+		cellB0.setLayout(new CardLayout(0, 0));
+		
+		b0 = new JButton("b0");
+		b0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("b0",player1,b0_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellB0.getLayout());
+				c.show(cellB0, "b0_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellB0.add(b0, "b0_btn");
+		
+		b0_panel = new JPanel();
+		cellB0.add(b0_panel, "b0_panel");
+		
+		cellB1 = new JPanel();
+		cellB1.setBounds(76, 0, 76, 77);
+		rowB.add(cellB1);
+		cellB1.setLayout(new CardLayout(0, 0));
+		
+		b1 = new JButton("b1");
+		b1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("b1",player1,b1_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellB1.getLayout());
+				c.show(cellB1, "b1_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellB1.add(b1, "b1_btn");
+		
+		b1_panel = new JPanel();
+		cellB1.add(b1_panel, "b1_panel");
+		
+		cellB2 = new JPanel();
+		cellB2.setBounds(152, 0, 76, 77);
+		rowB.add(cellB2);
+		cellB2.setLayout(new CardLayout(0, 0));
+		
+		b2 = new JButton("b2");
+		b2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("b2",player1,b2_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellB2.getLayout());
+				c.show(cellB2, "b2_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellB2.add(b2, "b2_btn");
+		
+		b2_panel = new JPanel();
+		cellB2.add(b2_panel, "b2_panel");
+		
+		cellB3 = new JPanel();
+		cellB3.setBounds(228, 0, 76, 77);
+		rowB.add(cellB3);
+		cellB3.setLayout(new CardLayout(0, 0));
+		
+		b3 = new JButton("b3");
+		b3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("b3",player1,b3_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellB3.getLayout());
+				c.show(cellB3, "b3_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellB3.add(b3, "b3_btn");
+		
+		b3_panel = new JPanel();
+		cellB3.add(b3_panel, "b3_panel");
+		
+		cellB4 = new JPanel();
+		cellB4.setBounds(304, 0, 76, 77);
+		rowB.add(cellB4);
+		cellB4.setLayout(new CardLayout(0, 0));
+		
+		b4 = new JButton("b4");
+		b4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("b4",player1,b4_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellB4.getLayout());
+				c.show(cellB4, "b4_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellB4.add(b4, "b4_btn");
+		
+		b4_panel = new JPanel();
+		cellB4.add(b4_panel, "b4_panel");
+		
+		cellB5 = new JPanel();
+		cellB5.setBounds(380, 0, 76, 77);
+		rowB.add(cellB5);
+		cellB5.setLayout(new CardLayout(0, 0));
+		
+		b5 = new JButton("b5");
+		b5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("b5",player1,b5_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellB5.getLayout());
+				c.show(cellB5, "b5_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellB5.add(b5, "b5_btn");
+		
+		b5_panel = new JPanel();
+		cellB5.add(b5_panel, "b5_panel");
+		
+		cellB6 = new JPanel();
+		cellB6.setBounds(456, 0, 76, 77);
+		rowB.add(cellB6);
+		cellB6.setLayout(new CardLayout(0, 0));
+		
+		b6 = new JButton("b6");
+		b6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("b6",player1,b6_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellB6.getLayout());
+				c.show(cellB6, "b6_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellB6.add(b6, "b6_btn");
+		
+		b6_panel = new JPanel();
+		cellB6.add(b6_panel, "b6_panel");
 		
 		rowC = new JPanel();
 		verticalBox.add(rowC);
+		rowC.setLayout(null);
+		
+		cellC0 = new JPanel();
+		cellC0.setBounds(0, 0, 76, 79);
+		rowC.add(cellC0);
+		cellC0.setLayout(new CardLayout(0, 0));
+		
+		c0 = new JButton("c0");
+		c0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				game1.checkUserGuess("c0",player1,c0_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellC0.getLayout());
+				c.show(cellC0, "c0_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellC0.add(c0, "c0_btn");
+		
+		c0_panel = new JPanel();
+		cellC0.add(c0_panel, "c0_panel");
+		
+		cellC1 = new JPanel();
+		cellC1.setBounds(76, 0, 76, 79);
+		rowC.add(cellC1);
+		cellC1.setLayout(new CardLayout(0, 0));
+		
+		c1 = new JButton("c1");
+		c1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				game1.checkUserGuess("c1",player1,c1_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellC1 .getLayout());
+				c.show(cellC1, "c1_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellC1.add(c1, "c1_btn");
+		
+		c1_panel = new JPanel();
+		cellC1.add(c1_panel, "c1_panel");
+		
+		cellC2 = new JPanel();
+		cellC2.setBounds(152, 0, 76, 79);
+		rowC.add(cellC2);
+		cellC2.setLayout(new CardLayout(0, 0));
+		
+		c2 = new JButton("c2");
+		c2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("c2",player1,c2_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellC2 .getLayout());
+				c.show(cellC2, "c2_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellC2.add(c2, "c2_btn");
+		
+		c2_panel = new JPanel();
+		cellC2.add(c2_panel, "c2_panel");
+		
+		cellC3 = new JPanel();
+		cellC3.setBounds(228, 0, 76, 79);
+		rowC.add(cellC3);
+		cellC3.setLayout(new CardLayout(0, 0));
+		
+		c3 = new JButton("c3");
+		c3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("c3",player1,c3_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellC3 .getLayout());
+				c.show(cellC3, "c3_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellC3.add(c3, "c3_btn");
+		
+		c3_panel = new JPanel();
+		cellC3.add(c3_panel, "c3_panel");
+		
+		cellC4 = new JPanel();
+		cellC4.setBounds(304, 0, 76, 79);
+		rowC.add(cellC4);
+		cellC4.setLayout(new CardLayout(0, 0));
+		
+		c4 = new JButton("c4");
+		c4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("c4",player1,c4_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellC4 .getLayout());
+				c.show(cellC4, "c4_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellC4.add(c4, "c4_btn");
+		
+		c4_panel = new JPanel();
+		cellC4.add(c4_panel, "c4_panel");
+		
+		cellC5 = new JPanel();
+		cellC5.setBounds(380, 0, 76, 79);
+		rowC.add(cellC5);
+		cellC5.setLayout(new CardLayout(0, 0));
+		
+		c5 = new JButton("c5");
+		c5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("c5",player1,c5_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellC5 .getLayout());
+				c.show(cellC5, "c5_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellC5.add(c5, "c5_btn");
+		
+		c5_panel = new JPanel();
+		cellC5.add(c5_panel, "c5_panel");
+		
+		cellC6 = new JPanel();
+		cellC6.setBounds(456, 0, 76, 79);
+		rowC.add(cellC6);
+		cellC6.setLayout(new CardLayout(0, 0));
+		
+		c6 = new JButton("c6");
+		c6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("c6",player1,c6_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellC6 .getLayout());
+				c.show(cellC6, "c6_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellC6.add(c6, "c6_btn");
+		
+		c6_panel = new JPanel();
+		cellC6.add(c6_panel, "c6_panel");
 		
 		rowD = new JPanel();
 		verticalBox.add(rowD);
+		rowD.setLayout(null);
+		
+		cellD0 = new JPanel();
+		cellD0.setBounds(0, 0, 76, 80);
+		rowD.add(cellD0);
+		cellD0.setLayout(new CardLayout(0, 0));
+		
+		d0 = new JButton("d0");
+		d0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("d0",player1,d0_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellD0 .getLayout());
+				c.show(cellD0, "d0_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellD0.add(d0, "d0_btn");
+		
+		d0_panel = new JPanel();
+		cellD0.add(d0_panel, "d0_panel");
+		
+		cellD1 = new JPanel();
+		cellD1.setBounds(76, 0, 76, 80);
+		rowD.add(cellD1);
+		cellD1.setLayout(new CardLayout(0, 0));
+		
+		d1 = new JButton("d1");
+		d1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("d1",player1,d1_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellD1 .getLayout());
+				c.show(cellD1, "d1_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellD1.add(d1, "d1_btn");
+		
+		d1_panel = new JPanel();
+		cellD1.add(d1_panel, "d1_panel");
+		
+		cellD2 = new JPanel();
+		cellD2.setBounds(152, 0, 76, 80);
+		rowD.add(cellD2);
+		cellD2.setLayout(new CardLayout(0, 0));
+		
+		d2 = new JButton("d2");
+		d2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("d2",player1,d2_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellD2 .getLayout());
+				c.show(cellD2, "d2_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellD2.add(d2, "d2_btn");
+		
+		d2_panel = new JPanel();
+		cellD2.add(d2_panel, "d2_panel");
+		
+		cellD3 = new JPanel();
+		cellD3.setBounds(228, 0, 76, 80);
+		rowD.add(cellD3);
+		cellD3.setLayout(new CardLayout(0, 0));
+		
+		d3 = new JButton("d3");
+		d3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("d3",player1,d3_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellD3 .getLayout());
+				c.show(cellD3, "d3_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellD3.add(d3, "d3_btn");
+		
+		d3_panel = new JPanel();
+		cellD3.add(d3_panel, "d3_panel");
+		
+		cellD4 = new JPanel();
+		cellD4.setBounds(304, 0, 76, 80);
+		rowD.add(cellD4);
+		cellD4.setLayout(new CardLayout(0, 0));
+		
+		d4 = new JButton("d4");
+		d4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("d4",player1,d4_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellD4 .getLayout());
+				c.show(cellD4, "d4_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellD4.add(d4, "d4_btn");
+		
+		d4_panel = new JPanel();
+		cellD4.add(d4_panel, "d4_panel");
+		
+		cellD5 = new JPanel();
+		cellD5.setBounds(380, 0, 76, 80);
+		rowD.add(cellD5);
+		cellD5.setLayout(new CardLayout(0, 0));
+		
+		d5 = new JButton("d5");
+		d5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("d5",player1,d5_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellD5 .getLayout());
+				c.show(cellD5, "d5_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellD5.add(d5, "d5_btn");
+		
+		d5_panel = new JPanel();
+		cellD5.add(d5_panel, "d5_panel");
+		
+		cellD6 = new JPanel();
+		cellD6.setBounds(456, 0, 76, 80);
+		rowD.add(cellD6);
+		cellD6.setLayout(new CardLayout(0, 0));
+		
+		d6 = new JButton("d6");
+		d6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("d6",player1,d6_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellD6 .getLayout());
+				c.show(cellD6, "d6_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth());
+			}
+		});
+		cellD6.add(d6, "d6_btn");
+		
+		d6_panel = new JPanel();
+		cellD6.add(d6_panel, "d6_panel");
 		
 		rowE = new JPanel();
 		verticalBox.add(rowE);
+		rowE.setLayout(null);
+		
+		cellE0 = new JPanel();
+		cellE0.setBounds(0, 0, 76, 81);
+		rowE.add(cellE0);
+		cellE0.setLayout(new CardLayout(0, 0));
+		
+		cellE1 = new JPanel();
+		cellE1.setBounds(76, 0, 76, 81);
+		rowE.add(cellE1);
+		cellE1.setLayout(new CardLayout(0, 0));
+		
+		cellE2 = new JPanel();
+		cellE2.setBounds(152, 0, 76, 81);
+		rowE.add(cellE2);
+		cellE2.setLayout(new CardLayout(0, 0));
+		
+		cellE3 = new JPanel();
+		cellE3.setBounds(228, 0, 76, 81);
+		rowE.add(cellE3);
+		cellE3.setLayout(new CardLayout(0, 0));
+		
+		cellE4 = new JPanel();
+		cellE4.setBounds(304, 0, 76, 81);
+		rowE.add(cellE4);
+		cellE4.setLayout(new CardLayout(0, 0));
+		
+		cellE5 = new JPanel();
+		cellE5.setBounds(380, 0, 76, 81);
+		rowE.add(cellE5);
+		cellE5.setLayout(new CardLayout(0, 0));
+		
+		cellE6 = new JPanel();
+		cellE6.setBounds(456, 0, 76, 81);
+		rowE.add(cellE6);
+		cellE6.setLayout(new CardLayout(0, 0));
 		
 		rowF = new JPanel();
 		verticalBox.add(rowF);
+		rowF.setLayout(null);
+		
+		cellF0 = new JPanel();
+		cellF0.setBounds(0, 0, 76, 83);
+		rowF.add(cellF0);
+		
+		cellF1 = new JPanel();
+		cellF1.setBounds(76, 0, 76, 83);
+		rowF.add(cellF1);
+		
+		cellF2 = new JPanel();
+		cellF2.setBounds(152, 0, 76, 83);
+		rowF.add(cellF2);
+		
+		cellF3 = new JPanel();
+		cellF3.setBounds(228, 0, 76, 83);
+		rowF.add(cellF3);
+		
+		cellF4 = new JPanel();
+		cellF4.setBounds(304, 0, 76, 83);
+		rowF.add(cellF4);
+		
+		cellF5 = new JPanel();
+		cellF5.setBounds(380, 0, 76, 83);
+		rowF.add(cellF5);
+		
+		cellF6 = new JPanel();
+		cellF6.setBounds(456, 0, 76, 83);
+		rowF.add(cellF6);
 		
 		rowG = new JPanel();
 		verticalBox.add(rowG);
+		rowG.setLayout(null);
+		
+		cellG0 = new JPanel();
+		cellG0.setBounds(0, 0, 76, 84);
+		rowG.add(cellG0);
+		
+		cellG1 = new JPanel();
+		cellG1.setBounds(76, 0, 76, 84);
+		rowG.add(cellG1);
+		
+		cellG2 = new JPanel();
+		cellG2.setBounds(152, 0, 76, 84);
+		rowG.add(cellG2);
+		
+		cellG3 = new JPanel();
+		cellG3.setBounds(228, 0, 76, 84);
+		rowG.add(cellG3);
+		
+		cellG4 = new JPanel();
+		cellG4.setBounds(304, 0, 76, 84);
+		rowG.add(cellG4);
+		
+		cellG5 = new JPanel();
+		cellG5.setBounds(380, 0, 76, 84);
+		rowG.add(cellG5);
+		
+		cellG6 = new JPanel();
+		cellG6.setBounds(456, 0, 76, 84);
+		rowG.add(cellG6);
 		
 		//the side panel for displaying the text to user as the game goes.
 		panelSide = new JPanel();

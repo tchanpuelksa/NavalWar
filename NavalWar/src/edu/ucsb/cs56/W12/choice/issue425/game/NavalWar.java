@@ -15,10 +15,10 @@ import java.util.*;
 
 public class NavalWar{
 
-	private GameHelper helper = new GameHelper();
-	private ArrayList<Entity> entityList = new ArrayList<Entity>();
-	private int numOfGuesses = 0;
-	private boolean winner = false;
+	protected GameHelper helper = new GameHelper();
+	protected ArrayList<Entity> entityList = new ArrayList<Entity>();
+	protected int numOfGuesses = 0;
+	protected boolean winner = false;
 	
 	/**
 	 * A void function that will create the battleships and set up the game

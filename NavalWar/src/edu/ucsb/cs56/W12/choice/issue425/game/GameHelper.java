@@ -19,6 +19,7 @@ public class GameHelper {
     private int gridSize = 64;
     private int [] grid = new int[gridSize];
     private int shipCount = 0;
+    
     public String getUserInput(String prompt) {
     
 	String inputLine = null;
