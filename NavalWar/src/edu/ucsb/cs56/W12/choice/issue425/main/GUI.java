@@ -276,7 +276,7 @@ public class GUI extends JFrame {
 					
 			}
 		});
-		Naval_War.setFont(new Font("AR BLANCA", Font.BOLD, 120));
+		Naval_War.setFont(new Font("HELVETICA", Font.BOLD, 120));
 		Naval_War.setBounds(36, 55, 672, 181);
 		titlePanel.add(Naval_War);
 		
@@ -288,7 +288,7 @@ public class GUI extends JFrame {
 				c1.show(cardStack, "enterName");
 			}
 		});
-		btnStart.setFont(new Font("AR JULIAN", Font.PLAIN, 18));
+		btnStart.setFont(new Font("HELVETICA", Font.PLAIN, 18));
 		btnStart.setBounds(275, 325, 193, 67);
 		titlePanel.add(btnStart);
 		
@@ -298,7 +298,7 @@ public class GUI extends JFrame {
 		enterName.setLayout(null);
 		
 		JLabel nameAsk = new JLabel("Before we continue, please state your name...");
-		nameAsk.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
+		nameAsk.setFont(new Font("HELVETICA", Font.BOLD, 16));
 		nameAsk.setBounds(39, 194, 429, 42);
 		enterName.add(nameAsk);
 
@@ -354,7 +354,7 @@ public class GUI extends JFrame {
 			}
 		});
 		btnToMain.setEnabled(false);
-		btnToMain.setFont(new Font("Comic Sans MS", Font.BOLD, 15));
+		btnToMain.setFont(new Font("HELVETICA", Font.BOLD, 15));
 		btnToMain.setBounds(276, 401, 191, 61);
 		enterName.add(btnToMain);
 		
@@ -370,32 +370,32 @@ public class GUI extends JFrame {
 		instructionBox.setLayout(null);
 		
 		JLabel instru1 = new JLabel("Hello, ");
-		instru1.setFont(new Font("Comic Sans MS", Font.BOLD, 13));
+		instru1.setFont(new Font("HELVETICA", Font.BOLD, 13));
 		instru1.setBounds(10, 11, 44, 43);
 		instructionBox.add(instru1);
 		
 		instruN = new JLabel("");
-		instruN.setFont(new Font("Comic Sans MS", Font.BOLD, 13));
+		instruN.setFont(new Font("HELVETICA", Font.BOLD, 13));
 		instruN.setBounds(52, 11, 610, 43);
 		instructionBox.add(instruN);
 		
 		JLabel instru2 = new JLabel("The goal of this game is to be able to reach a score of 1000. However, getting there won't be");
-		instru2.setFont(new Font("Comic Sans MS", Font.BOLD, 13));
+		instru2.setFont(new Font("HELVETICA", Font.BOLD, 13));
 		instru2.setBounds(10, 65, 652, 43);
 		instructionBox.add(instru2);
 		
 		JLabel instru3 = new JLabel("an easy task. In order to earn points, you will select one cell of the grid each time. This cell");
-		instru3.setFont(new Font("Comic Sans MS", Font.BOLD, 13));
+		instru3.setFont(new Font("HELVETICA", Font.BOLD, 13));
 		instru3.setBounds(10, 119, 652, 43);
 		instructionBox.add(instru3);
 		
 		JLabel instru4 = new JLabel("can either be a ship, which will earn you points, or a bomb which will inflict damages, or just");
-		instru4.setFont(new Font("Comic Sans MS", Font.BOLD, 13));
+		instru4.setFont(new Font("HELVETICA", Font.BOLD, 13));
 		instru4.setBounds(10, 173, 652, 43);
 		instructionBox.add(instru4);
 		
 		instru5 = new JLabel("a plain and empty cell. Alright, let's see what you can do...");
-		instru5.setFont(new Font("Comic Sans MS", Font.BOLD, 13));
+		instru5.setFont(new Font("HELVETICA", Font.BOLD, 13));
 		instru5.setBounds(10, 227, 652, 43);
 		instructionBox.add(instru5);
 		
@@ -419,7 +419,7 @@ public class GUI extends JFrame {
 				game1.startPlaying(player1, sideText);
 			}
 		});
-		btnToMainPage.setFont(new Font("Comic Sans MS", Font.BOLD, 15));
+		btnToMainPage.setFont(new Font("HELVETICA", Font.BOLD, 15));
 		btnToMainPage.setBounds(514, 348, 200, 55);
 		instruction.add(btnToMainPage);
 		
@@ -436,32 +436,32 @@ public class GUI extends JFrame {
 		panelProfile.setLayout(null);
 		
 		lblName = new JLabel("Name:");
-		lblName.setFont(new Font("Comic Sans MS", Font.BOLD, 13));
+		lblName.setFont(new Font("HELVETICA", Font.BOLD, 13));
 		lblName.setBounds(10, 11, 50, 24);
 		panelProfile.add(lblName);
 		
 		usrName = new JLabel("");
-		usrName.setFont(new Font("Comic Sans MS", Font.BOLD, 13));
+		usrName.setFont(new Font("HELVETICA", Font.BOLD, 13));
 		usrName.setBounds(70, 11, 644, 24);
 		panelProfile.add(usrName);
 		
 		lblHealth = new JLabel("Health:");
-		lblHealth.setFont(new Font("Comic Sans MS", Font.BOLD, 13));
+		lblHealth.setFont(new Font("HELVETICA", Font.BOLD, 13));
 		lblHealth.setBounds(10, 77, 50, 24);
 		panelProfile.add(lblHealth);
 		
 		usrHealth = new JLabel("");
-		usrHealth.setFont(new Font("Comic Sans MS", Font.BOLD, 13));
+		usrHealth.setFont(new Font("HELVETICA", Font.BOLD, 13));
 		usrHealth.setBounds(70, 77, 137, 24);
 		panelProfile.add(usrHealth);
 		
 		lblScore = new JLabel("Scores:");
-		lblScore.setFont(new Font("Comic Sans MS", Font.BOLD, 13));
+		lblScore.setFont(new Font("HELVETICA", Font.BOLD, 13));
 		lblScore.setBounds(552, 77, 50, 24);
 		panelProfile.add(lblScore);
 		
 		usrScore = new JLabel("");
-		usrScore.setFont(new Font("Comic Sans MS", Font.BOLD, 13));
+		usrScore.setFont(new Font("HELVETICA", Font.BOLD, 13));
 		usrScore.setBounds(612, 77, 102, 24);
 		panelProfile.add(usrScore);
 		
@@ -1642,7 +1642,7 @@ public class GUI extends JFrame {
 		//actual text pane that goes inside panelSide
 		sideText = new JTextPane();
 		sideText.setEditable(false);
-		sideText.setFont(new Font("Comic Sans MS", Font.PLAIN, 12));
+		sideText.setFont(new Font("HELVETICA", Font.PLAIN, 12));
 		sideText.setBounds(0, 0, 173, 541);
 		panelSide.add(sideText);
 		
@@ -1654,13 +1654,13 @@ public class GUI extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("GAME OVER");
 		lblNewLabel.setForeground(Color.RED);
-		lblNewLabel.setFont(new Font("AR HERMANN", Font.BOLD, 85));
+		lblNewLabel.setFont(new Font("HELVETICA", Font.BOLD, 85));
 		lblNewLabel.setEnabled(true);
 		lblNewLabel.setBounds(55, 84, 626, 212);
 		gameOver.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Gotta watch out for those mines.");
-		lblNewLabel_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
+		lblNewLabel_1.setFont(new Font("HELVETICA", Font.PLAIN, 25));
 		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setBounds(174, 307, 396, 66);
 		gameOver.add(lblNewLabel_1);
@@ -1787,7 +1787,7 @@ public class GUI extends JFrame {
 				
 			}
 		});
-		btnNewButton.setFont(new Font("PMingLiU-ExtB", Font.BOLD, 24));
+		btnNewButton.setFont(new Font("HELVETICA", Font.BOLD, 24));
 		btnNewButton.setBounds(259, 431, 199, 101);
 		gameOver.add(btnNewButton);
 		
@@ -1797,26 +1797,26 @@ public class GUI extends JFrame {
 		gameWin.setLayout(null);
 		
 		lblNewLabel_2 = new JLabel("Congratulation! You've won! Yay :D");
-		lblNewLabel_2.setFont(new Font("Comic Sans MS", Font.PLAIN, 39));
+		lblNewLabel_2.setFont(new Font("HELVETICA", Font.PLAIN, 39));
 		lblNewLabel_2.setForeground(Color.WHITE);
 		lblNewLabel_2.setBounds(40, 41, 661, 152);
 		gameWin.add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("It took you");
-		lblNewLabel_3.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
+		lblNewLabel_3.setFont(new Font("HELVETICA", Font.PLAIN, 20));
 		lblNewLabel_3.setForeground(Color.YELLOW);
 		lblNewLabel_3.setBounds(50, 204, 113, 61);
 		gameWin.add(lblNewLabel_3);
 		
 		numG = new JLabel("00");
-		numG.setFont(new Font("AR JULIAN", Font.PLAIN, 23));
+		numG.setFont(new Font("HELVETICA", Font.PLAIN, 23));
 		numG.setForeground(Color.RED);
 		numG.setBounds(173, 204, 62, 61);
 		gameWin.add(numG);
 		
 		lblNewLabel_5 = new JLabel("Guesses.");
 		lblNewLabel_5.setForeground(Color.YELLOW);
-		lblNewLabel_5.setFont(new Font("Comic Sans MS", Font.PLAIN, 19));
+		lblNewLabel_5.setFont(new Font("HELVETICA", Font.PLAIN, 19));
 		lblNewLabel_5.setBounds(245, 204, 153, 61);
 		gameWin.add(lblNewLabel_5);
 		
@@ -1941,7 +1941,7 @@ public class GUI extends JFrame {
 				
 			}
 		});
-		btnNewButton_1.setFont(new Font("SimSun-ExtB", Font.PLAIN, 28));
+		btnNewButton_1.setFont(new Font("HELVETICA", Font.PLAIN, 28));
 		btnNewButton_1.setBounds(245, 388, 234, 152);
 		gameWin.add(btnNewButton_1);
 		
