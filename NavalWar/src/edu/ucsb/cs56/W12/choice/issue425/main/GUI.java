@@ -173,6 +173,55 @@ public class GUI extends JFrame {
 	private JPanel d4_panel;
 	private JPanel d5_panel;
 	private JPanel d6_panel;
+	private JButton e0;
+	private JButton e1;
+	private JButton e2;
+	private JButton e3;
+	private JButton e4;
+	private JButton e5;
+	private JButton e6;
+	private JPanel e0_panel;
+	private JPanel e1_panel;
+	private JPanel e2_panel;
+	private JPanel e3_panel;
+	private JPanel e4_panel;
+	private JPanel e5_panel;
+	private JPanel e6_panel;
+	private JButton f0;
+	private JButton f1;
+	private JButton f2;
+	private JButton f3;
+	private JButton f4;
+	private JButton f5;
+	private JButton f6;
+	private JPanel f0_panel;
+	private JPanel f1_panel;
+	private JPanel f2_panel;
+	private JPanel f3_panel;
+	private JPanel f4_panel;
+	private JPanel f5_panel;
+	private JPanel f6_panel;
+	private JButton g0;
+	private JButton g1;
+	private JButton g2;
+	private JButton g3;
+	private JButton g4;
+	private JButton g5;
+	private JButton g6;
+	private JPanel g0_panel;
+	private JPanel g1_panel;
+	private JPanel g2_panel;
+	private JPanel g3_panel;
+	private JPanel g4_panel;
+	private JPanel g5_panel;
+	private JPanel g6_panel;
+	private JPanel gameOver;
+	private JPanel gameWin;
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_3;
+	private JLabel numG;
+	private JLabel lblNewLabel_5;
+	private JButton btnNewButton_1;
 
 	public GUI() {
 		setResizable(false);
@@ -194,8 +243,7 @@ public class GUI extends JFrame {
 		JMenuItem mntmExit = new JMenuItem("Exit");
 		mntmExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				game1.finishGame();
-				//System.exit(0);
+				System.exit(0);
 			}
 		});
 		mnFile.add(mntmExit);
@@ -448,7 +496,8 @@ public class GUI extends JFrame {
 				c.show(cellA0, "a0_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellA0.add(a0, "a0_btn");
@@ -471,7 +520,8 @@ public class GUI extends JFrame {
 				c.show(cellA1, "a1_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellA1.add(a1, "a1_btn");
@@ -493,7 +543,8 @@ public class GUI extends JFrame {
 				c.show(cellA2, "a2_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellA2.add(a2, "a2_btn");
@@ -515,7 +566,8 @@ public class GUI extends JFrame {
 				c.show(cellA3, "a3_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellA3.add(a3, "a3_btn");
@@ -537,7 +589,8 @@ public class GUI extends JFrame {
 				c.show(cellA4, "a4_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellA4.add(a4, "a4_btn");
@@ -559,7 +612,8 @@ public class GUI extends JFrame {
 				c.show(cellA5, "a5_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellA5.add(a5, "a5_btn");
@@ -581,7 +635,8 @@ public class GUI extends JFrame {
 				c.show(cellA6, "a6_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellA6.add(a6, "a6_btn");
@@ -607,7 +662,8 @@ public class GUI extends JFrame {
 				c.show(cellB0, "b0_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellB0.add(b0, "b0_btn");
@@ -629,7 +685,8 @@ public class GUI extends JFrame {
 				c.show(cellB1, "b1_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellB1.add(b1, "b1_btn");
@@ -651,7 +708,8 @@ public class GUI extends JFrame {
 				c.show(cellB2, "b2_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellB2.add(b2, "b2_btn");
@@ -673,7 +731,8 @@ public class GUI extends JFrame {
 				c.show(cellB3, "b3_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellB3.add(b3, "b3_btn");
@@ -695,7 +754,8 @@ public class GUI extends JFrame {
 				c.show(cellB4, "b4_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellB4.add(b4, "b4_btn");
@@ -717,7 +777,8 @@ public class GUI extends JFrame {
 				c.show(cellB5, "b5_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellB5.add(b5, "b5_btn");
@@ -739,7 +800,8 @@ public class GUI extends JFrame {
 				c.show(cellB6, "b6_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellB6.add(b6, "b6_btn");
@@ -765,7 +827,8 @@ public class GUI extends JFrame {
 				c.show(cellC0, "c0_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellC0.add(c0, "c0_btn");
@@ -787,7 +850,8 @@ public class GUI extends JFrame {
 				c.show(cellC1, "c1_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellC1.add(c1, "c1_btn");
@@ -809,7 +873,8 @@ public class GUI extends JFrame {
 				c.show(cellC2, "c2_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellC2.add(c2, "c2_btn");
@@ -831,7 +896,8 @@ public class GUI extends JFrame {
 				c.show(cellC3, "c3_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellC3.add(c3, "c3_btn");
@@ -853,7 +919,8 @@ public class GUI extends JFrame {
 				c.show(cellC4, "c4_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellC4.add(c4, "c4_btn");
@@ -875,7 +942,8 @@ public class GUI extends JFrame {
 				c.show(cellC5, "c5_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellC5.add(c5, "c5_btn");
@@ -897,7 +965,8 @@ public class GUI extends JFrame {
 				c.show(cellC6, "c6_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellC6.add(c6, "c6_btn");
@@ -923,7 +992,8 @@ public class GUI extends JFrame {
 				c.show(cellD0, "d0_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellD0.add(d0, "d0_btn");
@@ -945,7 +1015,8 @@ public class GUI extends JFrame {
 				c.show(cellD1, "d1_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellD1.add(d1, "d1_btn");
@@ -967,7 +1038,8 @@ public class GUI extends JFrame {
 				c.show(cellD2, "d2_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellD2.add(d2, "d2_btn");
@@ -989,7 +1061,8 @@ public class GUI extends JFrame {
 				c.show(cellD3, "d3_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellD3.add(d3, "d3_btn");
@@ -1011,7 +1084,8 @@ public class GUI extends JFrame {
 				c.show(cellD4, "d4_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellD4.add(d4, "d4_btn");
@@ -1033,7 +1107,8 @@ public class GUI extends JFrame {
 				c.show(cellD5, "d5_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellD5.add(d5, "d5_btn");
@@ -1055,7 +1130,8 @@ public class GUI extends JFrame {
 				c.show(cellD6, "d6_panel");
 				
 				usrScore.setText(""+player1.getScore());
-				usrHealth.setText(""+player1.getCurrentHealth());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
 			}
 		});
 		cellD6.add(d6, "d6_btn");
@@ -1072,35 +1148,161 @@ public class GUI extends JFrame {
 		rowE.add(cellE0);
 		cellE0.setLayout(new CardLayout(0, 0));
 		
+		e0 = new JButton("e0");
+		e0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("e0",player1,e0_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellE0 .getLayout());
+				c.show(cellE0, "e0_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellE0.add(e0, "e0_btn");
+		
+		e0_panel = new JPanel();
+		cellE0.add(e0_panel, "e0_panel");
+		
 		cellE1 = new JPanel();
 		cellE1.setBounds(76, 0, 76, 81);
 		rowE.add(cellE1);
 		cellE1.setLayout(new CardLayout(0, 0));
+		
+		e1 = new JButton("e1");
+		e1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("e1",player1,e1_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellE1 .getLayout());
+				c.show(cellE1, "e1_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellE1.add(e1, "e1_btn");
+		
+		e1_panel = new JPanel();
+		cellE1.add(e1_panel, "e1_panel");
 		
 		cellE2 = new JPanel();
 		cellE2.setBounds(152, 0, 76, 81);
 		rowE.add(cellE2);
 		cellE2.setLayout(new CardLayout(0, 0));
 		
+		e2 = new JButton("e2");
+		e2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("e2",player1,e2_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellE2 .getLayout());
+				c.show(cellE2, "e2_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellE2.add(e2, "e2_btn");
+		
+		e2_panel = new JPanel();
+		cellE2.add(e2_panel, "e2_panel");
+		
 		cellE3 = new JPanel();
 		cellE3.setBounds(228, 0, 76, 81);
 		rowE.add(cellE3);
 		cellE3.setLayout(new CardLayout(0, 0));
+		
+		e3 = new JButton("e3");
+		e3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("e3",player1,e3_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellE3 .getLayout());
+				c.show(cellE3, "e3_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellE3.add(e3, "e3_btn");
+		
+		e3_panel = new JPanel();
+		cellE3.add(e3_panel, "e3_panel");
 		
 		cellE4 = new JPanel();
 		cellE4.setBounds(304, 0, 76, 81);
 		rowE.add(cellE4);
 		cellE4.setLayout(new CardLayout(0, 0));
 		
+		e4 = new JButton("e4");
+		e4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("e4",player1,e4_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellE4 .getLayout());
+				c.show(cellE4, "e4_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellE4.add(e4, "e4_btn");
+		
+		e4_panel = new JPanel();
+		cellE4.add(e4_panel, "e4_panel");
+		
 		cellE5 = new JPanel();
 		cellE5.setBounds(380, 0, 76, 81);
 		rowE.add(cellE5);
 		cellE5.setLayout(new CardLayout(0, 0));
 		
+		e5 = new JButton("e5");
+		e5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("e5",player1,e5_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellE5 .getLayout());
+				c.show(cellE5, "e5_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellE5.add(e5, "e5_btn");
+		
+		e5_panel = new JPanel();
+		cellE5.add(e5_panel, "e5_panel");
+		
 		cellE6 = new JPanel();
 		cellE6.setBounds(456, 0, 76, 81);
 		rowE.add(cellE6);
 		cellE6.setLayout(new CardLayout(0, 0));
+		
+		e6 = new JButton("e6");
+		e6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("e6",player1,e6_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellE6 .getLayout());
+				c.show(cellE6, "e6_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellE6.add(e6, "e6_btn");
+		
+		e6_panel = new JPanel();
+		cellE6.add(e6_panel, "e6_panel");
 		
 		rowF = new JPanel();
 		verticalBox.add(rowF);
@@ -1109,30 +1311,163 @@ public class GUI extends JFrame {
 		cellF0 = new JPanel();
 		cellF0.setBounds(0, 0, 76, 83);
 		rowF.add(cellF0);
+		cellF0.setLayout(new CardLayout(0, 0));
+		
+		f0 = new JButton("f0");
+		f0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("f0",player1,f0_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellF0 .getLayout());
+				c.show(cellF0, "f0_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellF0.add(f0, "f0_btn");
+		
+		f0_panel = new JPanel();
+		cellF0.add(f0_panel, "f0_panel");
 		
 		cellF1 = new JPanel();
 		cellF1.setBounds(76, 0, 76, 83);
 		rowF.add(cellF1);
+		cellF1.setLayout(new CardLayout(0, 0));
+		
+		f1 = new JButton("f1");
+		f1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("f1",player1,f1_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellF1 .getLayout());
+				c.show(cellF1, "f1_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellF1.add(f1, "f1_btn");
+		
+		f1_panel = new JPanel();
+		cellF1.add(f1_panel, "f1_panel");
 		
 		cellF2 = new JPanel();
 		cellF2.setBounds(152, 0, 76, 83);
 		rowF.add(cellF2);
+		cellF2.setLayout(new CardLayout(0, 0));
+		
+		f2 = new JButton("f2");
+		f2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("f2",player1,f2_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellF2 .getLayout());
+				c.show(cellF2, "f2_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellF2.add(f2, "f2_btn");
+		
+		f2_panel = new JPanel();
+		cellF2.add(f2_panel, "f2_panel");
 		
 		cellF3 = new JPanel();
 		cellF3.setBounds(228, 0, 76, 83);
 		rowF.add(cellF3);
+		cellF3.setLayout(new CardLayout(0, 0));
+		
+		f3 = new JButton("f3");
+		f3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("f3",player1,f3_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellF3 .getLayout());
+				c.show(cellF3, "f3_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellF3.add(f3, "f3_btn");
+		
+		f3_panel = new JPanel();
+		cellF3.add(f3_panel, "f3_panel");
 		
 		cellF4 = new JPanel();
 		cellF4.setBounds(304, 0, 76, 83);
 		rowF.add(cellF4);
+		cellF4.setLayout(new CardLayout(0, 0));
+		
+		f4 = new JButton("f4");
+		f4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("f4",player1,f4_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellF4 .getLayout());
+				c.show(cellF4, "f4_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellF4.add(f4, "f4_btn");
+		
+		f4_panel = new JPanel();
+		cellF4.add(f4_panel, "f4_panel");
 		
 		cellF5 = new JPanel();
 		cellF5.setBounds(380, 0, 76, 83);
 		rowF.add(cellF5);
+		cellF5.setLayout(new CardLayout(0, 0));
+		
+		f5 = new JButton("f5");
+		f5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("f5",player1,f5_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellF5 .getLayout());
+				c.show(cellF5, "f5_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellF5.add(f5, "f5_btn");
+		
+		f5_panel = new JPanel();
+		cellF5.add(f5_panel, "f5_panel");
 		
 		cellF6 = new JPanel();
 		cellF6.setBounds(456, 0, 76, 83);
 		rowF.add(cellF6);
+		cellF6.setLayout(new CardLayout(0, 0));
+		
+		f6 = new JButton("f6");
+		f6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("f6",player1,f6_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellF6 .getLayout());
+				c.show(cellF6, "f6_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellF6.add(f6, "f6_btn");
+		
+		f6_panel = new JPanel();
+		cellF6.add(f6_panel, "f6_panel");
 		
 		rowG = new JPanel();
 		verticalBox.add(rowG);
@@ -1141,30 +1476,163 @@ public class GUI extends JFrame {
 		cellG0 = new JPanel();
 		cellG0.setBounds(0, 0, 76, 84);
 		rowG.add(cellG0);
+		cellG0.setLayout(new CardLayout(0, 0));
+		
+		g0 = new JButton("g0");
+		g0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				game1.checkUserGuess("g0",player1,g0_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellG0 .getLayout());
+				c.show(cellG0, "g0_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellG0.add(g0, "g0_btn");
+		
+		g0_panel = new JPanel();
+		cellG0.add(g0_panel, "g0_panel");
 		
 		cellG1 = new JPanel();
 		cellG1.setBounds(76, 0, 76, 84);
 		rowG.add(cellG1);
+		cellG1.setLayout(new CardLayout(0, 0));
+		
+		g1 = new JButton("g1");
+		g1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("g1",player1,g1_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellG1 .getLayout());
+				c.show(cellG1, "g1_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellG1.add(g1, "g1_btn");
+		
+		g1_panel = new JPanel();
+		cellG1.add(g1_panel, "g1_panel");
 		
 		cellG2 = new JPanel();
 		cellG2.setBounds(152, 0, 76, 84);
 		rowG.add(cellG2);
+		cellG2.setLayout(new CardLayout(0, 0));
+		
+		g2 = new JButton("g2");
+		g2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("g2",player1,g2_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellG2 .getLayout());
+				c.show(cellG2, "g2_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellG2.add(g2, "g2_btn");
+		
+		g2_panel = new JPanel();
+		cellG2.add(g2_panel, "g2_panel");
 		
 		cellG3 = new JPanel();
 		cellG3.setBounds(228, 0, 76, 84);
 		rowG.add(cellG3);
+		cellG3.setLayout(new CardLayout(0, 0));
+		
+		g3 = new JButton("g3");
+		g3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("g3",player1,g3_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellG3 .getLayout());
+				c.show(cellG3, "g3_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellG3.add(g3, "g3_btn");
+		
+		g3_panel = new JPanel();
+		cellG3.add(g3_panel, "g3_panel");
 		
 		cellG4 = new JPanel();
 		cellG4.setBounds(304, 0, 76, 84);
 		rowG.add(cellG4);
+		cellG4.setLayout(new CardLayout(0, 0));
+		
+		g4 = new JButton("g4");
+		g4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("g4",player1,g4_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellG4 .getLayout());
+				c.show(cellG4, "g4_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellG4.add(g4, "g4_btn");
+		
+		g4_panel = new JPanel();
+		cellG4.add(g4_panel, "g4_panel");
 		
 		cellG5 = new JPanel();
 		cellG5.setBounds(380, 0, 76, 84);
 		rowG.add(cellG5);
+		cellG5.setLayout(new CardLayout(0, 0));
+		
+		g5 = new JButton("g5");
+		g5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("g5",player1,g5_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellG5 .getLayout());
+				c.show(cellG5, "g5_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellG5.add(g5, "g5_btn");
+		
+		g5_panel = new JPanel();
+		cellG5.add(g5_panel, "g5_panel");
 		
 		cellG6 = new JPanel();
 		cellG6.setBounds(456, 0, 76, 84);
 		rowG.add(cellG6);
+		cellG6.setLayout(new CardLayout(0, 0));
+		
+		g6 = new JButton("g6");
+		g6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				game1.checkUserGuess("g6",player1,g6_panel,sideText);
+				
+				CardLayout c = (CardLayout)(cellG6 .getLayout());
+				c.show(cellG6, "g6_panel");
+				
+				usrScore.setText(""+player1.getScore());
+				usrHealth.setText(""+player1.getCurrentHealth()); 
+				checkGameStatus(player1);
+			}
+		});
+		cellG6.add(g6, "g6_btn");
+		
+		g6_panel = new JPanel();
+		cellG6.add(g6_panel, "g6_panel");
 		
 		//the side panel for displaying the text to user as the game goes.
 		panelSide = new JPanel();
@@ -1177,6 +1645,305 @@ public class GUI extends JFrame {
 		sideText.setFont(new Font("Comic Sans MS", Font.PLAIN, 12));
 		sideText.setBounds(0, 0, 173, 541);
 		panelSide.add(sideText);
+		
+		gameOver = new JPanel();
+		gameOver.setForeground(Color.RED);
+		gameOver.setBackground(Color.BLACK);
+		cardStack.add(gameOver, "gameOver");
+		gameOver.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("GAME OVER");
+		lblNewLabel.setForeground(Color.RED);
+		lblNewLabel.setFont(new Font("AR HERMANN", Font.BOLD, 85));
+		lblNewLabel.setEnabled(true);
+		lblNewLabel.setBounds(55, 84, 626, 212);
+		gameOver.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Gotta watch out for those mines.");
+		lblNewLabel_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
+		lblNewLabel_1.setForeground(Color.WHITE);
+		lblNewLabel_1.setBounds(174, 307, 396, 66);
+		gameOver.add(lblNewLabel_1);
+		
+		JButton btnNewButton = new JButton("TRY AGAIN");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CardLayout c = (CardLayout)(cardStack .getLayout());
+				c.show(cardStack, "mainPanel");//TODO
+				
+				//reset the A row buttons
+				CardLayout a0 = (CardLayout)(cellA0 .getLayout());
+				a0.show(cellA0, "a0_btn");
+				CardLayout a1 = (CardLayout)(cellA1 .getLayout());
+				a1.show(cellA1, "a1_btn");
+				CardLayout a2 = (CardLayout)(cellA2 .getLayout());
+				a2.show(cellA2, "a2_btn");
+				CardLayout a3 = (CardLayout)(cellA3 .getLayout());
+				a3.show(cellA3, "a3_btn");
+				CardLayout a4 = (CardLayout)(cellA4 .getLayout());
+				a4.show(cellA4, "a4_btn");
+				CardLayout a5 = (CardLayout)(cellA5 .getLayout());
+				a5.show(cellA5, "a5_btn");
+				CardLayout a6 = (CardLayout)(cellA6 .getLayout());
+				a6.show(cellA6, "a6_btn");
+				
+				//reset the B row buttons
+				CardLayout b0 = (CardLayout)(cellB0 .getLayout());
+				b0.show(cellB0, "b0_btn");
+				CardLayout b1 = (CardLayout)(cellB1 .getLayout());
+				b1.show(cellB1, "b1_btn");
+				CardLayout b2 = (CardLayout)(cellB2 .getLayout());
+				b2.show(cellB2, "b2_btn");
+				CardLayout b3 = (CardLayout)(cellB3 .getLayout());
+				b3.show(cellB3, "b3_btn");
+				CardLayout b4 = (CardLayout)(cellB4 .getLayout());
+				b4.show(cellB4, "b4_btn");
+				CardLayout b5 = (CardLayout)(cellB5 .getLayout());
+				b5.show(cellB5, "b5_btn");
+				CardLayout b6 = (CardLayout)(cellB6 .getLayout());
+				b6.show(cellB6, "b6_btn");
+				
+				//reset the C row buttons
+				CardLayout c0 = (CardLayout)(cellC0 .getLayout());
+				c0.show(cellC0, "c0_btn");
+				CardLayout c1 = (CardLayout)(cellC1 .getLayout());
+				c1.show(cellC1, "c1_btn");
+				CardLayout c2 = (CardLayout)(cellC2 .getLayout());
+				c2.show(cellC2, "c2_btn");
+				CardLayout c3 = (CardLayout)(cellC3 .getLayout());
+				c3.show(cellC3, "c3_btn");
+				CardLayout c4 = (CardLayout)(cellC4 .getLayout());
+				c4.show(cellC4, "c4_btn");
+				CardLayout c5 = (CardLayout)(cellC5 .getLayout());
+				c5.show(cellC5, "c5_btn");
+				CardLayout c6 = (CardLayout)(cellC6 .getLayout());
+				c6.show(cellC6, "c6_btn");
+				
+				//reset the D row buttons
+				CardLayout d0 = (CardLayout)(cellD0 .getLayout());
+				d0.show(cellD0, "d0_btn");
+				CardLayout d1 = (CardLayout)(cellD1 .getLayout());
+				d1.show(cellD1, "d1_btn");
+				CardLayout d2 = (CardLayout)(cellD2 .getLayout());
+				d2.show(cellD2, "d2_btn");
+				CardLayout d3 = (CardLayout)(cellD3 .getLayout());
+				d3.show(cellD3, "d3_btn");
+				CardLayout d4 = (CardLayout)(cellD4 .getLayout());
+				d4.show(cellD4, "d4_btn");
+				CardLayout d5 = (CardLayout)(cellD5 .getLayout());
+				d5.show(cellD5, "d5_btn");
+				CardLayout d6 = (CardLayout)(cellD6 .getLayout());
+				d6.show(cellD6, "d6_btn");
+				
+				//reset the E row buttons
+				CardLayout e0 = (CardLayout)(cellE0 .getLayout());
+				e0.show(cellE0, "e0_btn");
+				CardLayout e1 = (CardLayout)(cellE1 .getLayout());
+				e1.show(cellE1, "e1_btn");
+				CardLayout e2 = (CardLayout)(cellE2 .getLayout());
+				e2.show(cellE2, "e2_btn");
+				CardLayout e3 = (CardLayout)(cellE3 .getLayout());
+				e3.show(cellE3, "e3_btn");
+				CardLayout e4 = (CardLayout)(cellE4 .getLayout());
+				e4.show(cellE4, "e4_btn");
+				CardLayout e5 = (CardLayout)(cellE5 .getLayout());
+				e5.show(cellE5, "e5_btn");
+				CardLayout e6 = (CardLayout)(cellE6 .getLayout());
+				e6.show(cellE6, "e6_btn");
+				
+				//reset the F row buttons
+				CardLayout f0 = (CardLayout)(cellF0 .getLayout());
+				f0.show(cellF0, "f0_btn");
+				CardLayout f1 = (CardLayout)(cellF1 .getLayout());
+				f1.show(cellF1, "f1_btn");
+				CardLayout f2 = (CardLayout)(cellF2 .getLayout());
+				f2.show(cellF2, "f2_btn");
+				CardLayout f3 = (CardLayout)(cellF3 .getLayout());
+				f3.show(cellF3, "f3_btn");
+				CardLayout f4 = (CardLayout)(cellF4 .getLayout());
+				f4.show(cellF4, "f4_btn");
+				CardLayout f5 = (CardLayout)(cellF5 .getLayout());
+				f5.show(cellF5, "f5_btn");
+				CardLayout f6 = (CardLayout)(cellF6 .getLayout());
+				f6.show(cellF6, "f6_btn");
+				
+				//reset the G row buttons
+				CardLayout g0 = (CardLayout)(cellG0 .getLayout());
+				g0.show(cellG0, "g0_btn");
+				CardLayout g1 = (CardLayout)(cellG1 .getLayout());
+				g1.show(cellG1, "g1_btn");
+				CardLayout g2 = (CardLayout)(cellG2 .getLayout());
+				g2.show(cellG2, "g2_btn");
+				CardLayout g3 = (CardLayout)(cellG3 .getLayout());
+				g3.show(cellG3, "g3_btn");
+				CardLayout g4 = (CardLayout)(cellG4 .getLayout());
+				g4.show(cellG4, "g4_btn");
+				CardLayout g5 = (CardLayout)(cellG5 .getLayout());
+				g5.show(cellG5, "g5_btn");
+				CardLayout g6 = (CardLayout)(cellG6 .getLayout());
+				g6.show(cellG6, "g6_btn");
+				
+				
+				
+			}
+		});
+		btnNewButton.setFont(new Font("PMingLiU-ExtB", Font.BOLD, 24));
+		btnNewButton.setBounds(259, 431, 199, 101);
+		gameOver.add(btnNewButton);
+		
+		gameWin = new JPanel();
+		gameWin.setBackground(Color.BLACK);
+		cardStack.add(gameWin, "gameWin");
+		gameWin.setLayout(null);
+		
+		lblNewLabel_2 = new JLabel("Congratulation! You've won! Yay :D");
+		lblNewLabel_2.setFont(new Font("Comic Sans MS", Font.PLAIN, 39));
+		lblNewLabel_2.setForeground(Color.WHITE);
+		lblNewLabel_2.setBounds(40, 41, 661, 152);
+		gameWin.add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("It took you");
+		lblNewLabel_3.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
+		lblNewLabel_3.setForeground(Color.YELLOW);
+		lblNewLabel_3.setBounds(50, 204, 113, 61);
+		gameWin.add(lblNewLabel_3);
+		
+		numG = new JLabel("00");
+		numG.setFont(new Font("AR JULIAN", Font.PLAIN, 23));
+		numG.setForeground(Color.RED);
+		numG.setBounds(173, 204, 62, 61);
+		gameWin.add(numG);
+		
+		lblNewLabel_5 = new JLabel("Guesses.");
+		lblNewLabel_5.setForeground(Color.YELLOW);
+		lblNewLabel_5.setFont(new Font("Comic Sans MS", Font.PLAIN, 19));
+		lblNewLabel_5.setBounds(245, 204, 153, 61);
+		gameWin.add(lblNewLabel_5);
+		
+		btnNewButton_1 = new JButton("PLAY AGAIN !!");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				CardLayout c = (CardLayout)(cardStack .getLayout());
+				c.show(cardStack, "mainPanel");//TODO
+				
+				//reset the A row buttons
+				CardLayout a0 = (CardLayout)(cellA0 .getLayout());
+				a0.show(cellA0, "a0_btn");
+				CardLayout a1 = (CardLayout)(cellA1 .getLayout());
+				a1.show(cellA1, "a1_btn");
+				CardLayout a2 = (CardLayout)(cellA2 .getLayout());
+				a2.show(cellA2, "a2_btn");
+				CardLayout a3 = (CardLayout)(cellA3 .getLayout());
+				a3.show(cellA3, "a3_btn");
+				CardLayout a4 = (CardLayout)(cellA4 .getLayout());
+				a4.show(cellA4, "a4_btn");
+				CardLayout a5 = (CardLayout)(cellA5 .getLayout());
+				a5.show(cellA5, "a5_btn");
+				CardLayout a6 = (CardLayout)(cellA6 .getLayout());
+				a6.show(cellA6, "a6_btn");
+				
+				//reset the B row buttons
+				CardLayout b0 = (CardLayout)(cellB0 .getLayout());
+				b0.show(cellB0, "b0_btn");
+				CardLayout b1 = (CardLayout)(cellB1 .getLayout());
+				b1.show(cellB1, "b1_btn");
+				CardLayout b2 = (CardLayout)(cellB2 .getLayout());
+				b2.show(cellB2, "b2_btn");
+				CardLayout b3 = (CardLayout)(cellB3 .getLayout());
+				b3.show(cellB3, "b3_btn");
+				CardLayout b4 = (CardLayout)(cellB4 .getLayout());
+				b4.show(cellB4, "b4_btn");
+				CardLayout b5 = (CardLayout)(cellB5 .getLayout());
+				b5.show(cellB5, "b5_btn");
+				CardLayout b6 = (CardLayout)(cellB6 .getLayout());
+				b6.show(cellB6, "b6_btn");
+				
+				//reset the C row buttons
+				CardLayout c0 = (CardLayout)(cellC0 .getLayout());
+				c0.show(cellC0, "c0_btn");
+				CardLayout c1 = (CardLayout)(cellC1 .getLayout());
+				c1.show(cellC1, "c1_btn");
+				CardLayout c2 = (CardLayout)(cellC2 .getLayout());
+				c2.show(cellC2, "c2_btn");
+				CardLayout c3 = (CardLayout)(cellC3 .getLayout());
+				c3.show(cellC3, "c3_btn");
+				CardLayout c4 = (CardLayout)(cellC4 .getLayout());
+				c4.show(cellC4, "c4_btn");
+				CardLayout c5 = (CardLayout)(cellC5 .getLayout());
+				c5.show(cellC5, "c5_btn");
+				CardLayout c6 = (CardLayout)(cellC6 .getLayout());
+				c6.show(cellC6, "c6_btn");
+				
+				//reset the D row buttons
+				CardLayout d0 = (CardLayout)(cellD0 .getLayout());
+				d0.show(cellD0, "d0_btn");
+				CardLayout d1 = (CardLayout)(cellD1 .getLayout());
+				d1.show(cellD1, "d1_btn");
+				CardLayout d2 = (CardLayout)(cellD2 .getLayout());
+				d2.show(cellD2, "d2_btn");
+				CardLayout d3 = (CardLayout)(cellD3 .getLayout());
+				d3.show(cellD3, "d3_btn");
+				CardLayout d4 = (CardLayout)(cellD4 .getLayout());
+				d4.show(cellD4, "d4_btn");
+				CardLayout d5 = (CardLayout)(cellD5 .getLayout());
+				d5.show(cellD5, "d5_btn");
+				CardLayout d6 = (CardLayout)(cellD6 .getLayout());
+				d6.show(cellD6, "d6_btn");
+				
+				//reset the E row buttons
+				CardLayout e0 = (CardLayout)(cellE0 .getLayout());
+				e0.show(cellE0, "e0_btn");
+				CardLayout e1 = (CardLayout)(cellE1 .getLayout());
+				e1.show(cellE1, "e1_btn");
+				CardLayout e2 = (CardLayout)(cellE2 .getLayout());
+				e2.show(cellE2, "e2_btn");
+				CardLayout e3 = (CardLayout)(cellE3 .getLayout());
+				e3.show(cellE3, "e3_btn");
+				CardLayout e4 = (CardLayout)(cellE4 .getLayout());
+				e4.show(cellE4, "e4_btn");
+				CardLayout e5 = (CardLayout)(cellE5 .getLayout());
+				e5.show(cellE5, "e5_btn");
+				CardLayout e6 = (CardLayout)(cellE6 .getLayout());
+				e6.show(cellE6, "e6_btn");
+				
+				//reset the F row buttons
+				CardLayout f0 = (CardLayout)(cellF0 .getLayout());
+				f0.show(cellF0, "f0_btn");
+				CardLayout f1 = (CardLayout)(cellF1 .getLayout());
+				f1.show(cellF1, "f1_btn");
+				CardLayout f2 = (CardLayout)(cellF2 .getLayout());
+				f2.show(cellF2, "f2_btn");
+				CardLayout f3 = (CardLayout)(cellF3 .getLayout());
+				f3.show(cellF3, "f3_btn");
+				CardLayout f4 = (CardLayout)(cellF4 .getLayout());
+				f4.show(cellF4, "f4_btn");
+				CardLayout f5 = (CardLayout)(cellF5 .getLayout());
+				f5.show(cellF5, "f5_btn");
+				CardLayout f6 = (CardLayout)(cellF6 .getLayout());
+				f6.show(cellF6, "f6_btn");
+				
+				//reset the G row buttons
+				CardLayout g0 = (CardLayout)(cellG0 .getLayout());
+				g0.show(cellG0, "g0_btn");
+				CardLayout g1 = (CardLayout)(cellG1 .getLayout());
+				g1.show(cellG1, "g1_btn");
+				CardLayout g2 = (CardLayout)(cellG2 .getLayout());
+				g2.show(cellG2, "g2_btn");
+				CardLayout g3 = (CardLayout)(cellG3 .getLayout());
+				g3.show(cellG3, "g3_btn");
+				CardLayout g4 = (CardLayout)(cellG4 .getLayout());
+				g4.show(cellG4, "g4_btn");
+				CardLayout g5 = (CardLayout)(cellG5 .getLayout());
+				g5.show(cellG5, "g5_btn");
+				CardLayout g6 = (CardLayout)(cellG6 .getLayout());
+				g6.show(cellG6, "g6_btn");
+				
+			}
+		});
+		btnNewButton_1.setFont(new Font("SimSun-ExtB", Font.PLAIN, 28));
+		btnNewButton_1.setBounds(245, 388, 234, 152);
+		gameWin.add(btnNewButton_1);
 		
 		
 	}
@@ -1195,5 +1962,18 @@ public class GUI extends JFrame {
 				}
 			}
 		});
+	}
+	
+	public void checkGameStatus(Player player){
+		if(player.getCurrentHealth() <= 0){
+			CardLayout c = (CardLayout)(cardStack .getLayout());
+			c.show(cardStack, "gameOver");
+		}
+		if(player.getScore() >= 1000){
+			numG.setText(""+game1.getNumGuess());
+			CardLayout g = (CardLayout)(cardStack .getLayout());
+			g.show(cardStack, "gameWin");
+			
+		}
 	}
 }

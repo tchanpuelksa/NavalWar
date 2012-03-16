@@ -22,18 +22,19 @@ public class NavalWarGUI extends NavalWar {
 	public void setUpGame(){
 		//Make some battleships and set them up
 		//Entity("nameOfShip",points,isAMedicShip, size)
-		Entity battlecruiser = new Entity("Battlecruiser",300 ,false, 3);
+		Entity battlecruiser = new Entity("Battlecruiser",250 ,false, 3);
 		Entity cruiser       = new Entity("Cruiser"      ,200 ,false, 2);
-	    Entity destroyer     = new Entity("Destroyer"    ,250 ,false, 3);
+	    Entity destroyer     = new Entity("Destroyer"    ,200 ,false, 3);
 	    Entity frigate       = new Entity("Frigate"      ,125 ,false, 2);
 	    Entity submarine     = new Entity("Submarine"    ,175 ,false, 2);
 	    Entity dreadnought   = new Entity("Dreadnought"  ,200 ,false, 3);
 	    Entity ssmedic       = new Entity("SS Medic"     ,125 ,true , 2);
 	    
-	    Entity bomb1         = new Entity("Small mine"   ,-50 ,false, 1);
+	    Entity bomb1         = new Entity("Small mine"   ,-40 ,false, 1);
 	    Entity bomb2         = new Entity("Mine"         ,-50 ,false, 1);
-	    Entity bomb3         = new Entity("Large mine"   ,-50 ,false, 1);
+	    Entity bomb3         = new Entity("Large mine"   ,-100 ,false, 1);
 	    Entity bomb4         = new Entity("GIANT MINE"   ,-150,false, 1);
+	    Entity bomb5         = new Entity("mine"         ,-50 ,false, 1);
 	    
 	    //Add them into the arrayList of battleship
 	    entityList.add(battlecruiser);
@@ -48,6 +49,7 @@ public class NavalWarGUI extends NavalWar {
 	    entityList.add(bomb2);
 	    entityList.add(bomb3);
 	    entityList.add(bomb4);
+	    entityList.add(bomb5);
 	    
 	    //Go through each of the entity in the list and use the GameHelper to help set a location
 	    for(Entity entityToSet : entityList ){
@@ -64,6 +66,7 @@ public class NavalWarGUI extends NavalWar {
 	
 	public void checkUserGuess(String usrGuess, Player player, JPanel cell, JTextPane sideText){
 		String result = "";
+		numOfGuesses++;
 		
 		for(Entity entityToTest : entityList){
 			result = entityToTest.checkIfHit(usrGuess);
@@ -125,8 +128,11 @@ public class NavalWarGUI extends NavalWar {
 			}
 		}
 	}
-	public void finishGame(){
-		
+	public int getNumGuess(){
+		return numOfGuesses;
+	}
+	public void setNumGuess(){
+		this.numOfGuesses = 0;
 	}
 	
 }
