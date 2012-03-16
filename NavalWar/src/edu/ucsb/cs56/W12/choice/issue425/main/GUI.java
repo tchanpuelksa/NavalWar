@@ -1669,7 +1669,7 @@ public class GUI extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				CardLayout c = (CardLayout)(cardStack .getLayout());
-				c.show(cardStack, "mainPanel");//TODO
+				c.show(cardStack, "instruction");
 				
 				//reset the A row buttons
 				CardLayout a0 = (CardLayout)(cellA0 .getLayout());
